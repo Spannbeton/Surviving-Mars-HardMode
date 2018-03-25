@@ -1,0 +1,1 @@
+const.OmegaTelescopeBreakthroughsCount = 0
