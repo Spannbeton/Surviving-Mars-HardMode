@@ -9,7 +9,6 @@ function SubsurfaceAnomaly:ScanCompleted(scanner)
     	BoostTechField(all, 2) 
 	GrantResearchPoints(2000) 
 	AddCustomOnScreenNotification("RSB","Breakthrough:","2% to all research, <research(2000)>")
-	Msg("AnomalyAnalyzed", self)
 		else
 		--AddCustomOnScreenNotification("RSB","Test","else case")
     		OldScanCompleted(self, scanner)

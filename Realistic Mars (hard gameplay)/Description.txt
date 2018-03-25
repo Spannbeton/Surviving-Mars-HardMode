@@ -1,0 +1,19 @@
+"Those who set foot on Mars will likely die there"
+-Mission Control before the Launch
+
+For those among us who believe the Game, even on maximum difficulty, was too easy.
+
+Features:
+
+- 20% Less funding
+- no breakthroughs (replaced by moderate research boost)
+- outsourcing is disabled
+- 30% less colonists per rocket
+- realistic batteries (70% efficiency)
+- rocket travel time increased by 50%
+
+Planned Features:
+
+- wind fluctuation
+- wonders need workers
+- Passenger Rockets cost money to launch
