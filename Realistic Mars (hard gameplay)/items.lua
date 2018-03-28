@@ -124,12 +124,12 @@ PlaceObj('ModItemCode', {
 	'FileName', "Code/Wonders.lua",
 }),
 PlaceObj('ModItemGameValue', {
-	'id', "MaxColonistsPerRocket",
-	'percent', -30,
-}),
-PlaceObj('ModItemGameValue', {
 	'id', "FundingGainsModifier",
 	'percent', -20,
+}),
+PlaceObj('ModItemGameValue', {
+	'id', "MaxColonistsPerRocket",
+	'percent', -30,
 }),
 PlaceObj('ModItemGameValue', {
 	'id', "TravelTimeMarsEarth",
