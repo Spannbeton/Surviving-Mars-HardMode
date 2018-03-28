@@ -2,6 +2,7 @@
 function OnMsg.GameTimeStart()
  	LockBuilding("AtomicBattery") 
 	LockBuilding("Battery_WaterFuelCell")
+	LockBuilding("SolarPanelBig")
 	if IsTechResearched("AtomicAccumulator") == nil then
 		LockBuilding("AA70")
 
@@ -16,7 +17,7 @@ end
 function OnMsg.LoadGame()
  	LockBuilding("AtomicBattery") 
 	LockBuilding("Battery_WaterFuelCell")
-
+	LockBuilding("SolarPanelBig")
 	if IsTechResearched("AtomicAccumulator") == nil then
 		LockBuilding("AA70")
 	else

@@ -10,10 +10,12 @@ Features:
 - outsourcing is disabled
 - 30% less colonists per rocket
 - realistic batteries (70% efficiency)
-- rocket travel time increased by 50%
+- rockets take 5 times as long
+- wind fluctuation
+- small Solars are viable now
 
 Planned Features:
 
-- wind fluctuation
+- Wind Power needs spacing
 - wonders need workers
 - Passenger Rockets cost money to launch

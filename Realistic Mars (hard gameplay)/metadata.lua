@@ -6,7 +6,7 @@ return PlaceObj('ModDef', {
 	'id', "LvDVa",
 	'steam_id', "1339570684",
 	'author', "Spannbeton",
-	'version', 42,
+	'version', 50,
 	'lua_revision', 228184,
 	'code', {
 		"Code/Lock Vanilla Power Buildings.lua",
@@ -15,5 +15,5 @@ return PlaceObj('ModDef', {
 		"Code/Wind fluctuation.lua",
 		"Code/Wonders.lua",
 	},
-	'saved', 1522012785,
+	'saved', 1522237536,
 })
