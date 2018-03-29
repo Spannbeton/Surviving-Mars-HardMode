@@ -108,6 +108,10 @@ PlaceObj('ModItemCode', {
 	'FileName', "Code/Lock Vanilla Power Buildings.lua",
 }),
 PlaceObj('ModItemCode', {
+	'name', "Mod Config",
+	'FileName', "Code/Mod Config.lua",
+}),
+PlaceObj('ModItemCode', {
 	'name', "No Outsourcing",
 	'FileName', "Code/No Outsourcing.lua",
 }),
@@ -124,19 +128,19 @@ PlaceObj('ModItemCode', {
 	'FileName', "Code/Wonders.lua",
 }),
 PlaceObj('ModItemGameValue', {
-	'id', "FundingGainsModifier",
-	'percent', -20,
-}),
-PlaceObj('ModItemGameValue', {
-	'id', "MaxColonistsPerRocket",
-	'percent', -30,
+	'id', "TravelTimeEarthMars",
+	'percent', 400,
 }),
 PlaceObj('ModItemGameValue', {
 	'id', "TravelTimeMarsEarth",
 	'percent', 400,
 }),
 PlaceObj('ModItemGameValue', {
-	'id', "TravelTimeEarthMars",
-	'percent', 400,
+	'id', "FundingGainsModifier",
+	'percent', -20,
+}),
+PlaceObj('ModItemGameValue', {
+	'id', "MaxColonistsPerRocket",
+	'percent', -30,
 }),
 }
