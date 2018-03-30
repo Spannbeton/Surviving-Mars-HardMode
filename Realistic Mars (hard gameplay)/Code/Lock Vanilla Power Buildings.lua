@@ -4,20 +4,20 @@ local ToggleSC = true
 
 
 function OnMsg.ModConfigChanged()
-lcPrint("Changed")
+--lcPrint("Changed")
 ToggleRB = ModConfig:Get("Hard Mode", "ToggleRealisticBatteries")
-lcPrint("ToggleRB = " .. tostring (ToggleRB))
+--lcPrint("ToggleRB = " .. tostring (ToggleRB))
 ToggleSC = ModConfig:Get("Hard Mode", "ToggleSolarPanelBigElectronics")
-lcPrint("Toggle SC =  " .. tostring (ToggleSC))
+--lcPrint("Toggle SC =  " .. tostring (ToggleSC))
 RealisticBatteries()
 SolarChange()
 end
 function OnMsg.ModConfigReady()
-lcPrint("Ready")
+--lcPrint("Ready")
 ToggleRB = ModConfig:Get("Hard Mode", "ToggleRealisticBatteries")
-lcPrint("ToggleRB = " .. tostring (ToggleRB))
+--lcPrint("ToggleRB = " .. tostring (ToggleRB))
 ToggleSC = ModConfig:Get("Hard Mode", "ToggleSolarPanelBigElectronics")
-lcPrint("Toggle SC =  " .. tostring (ToggleSC))
+--lcPrint("Toggle SC =  " .. tostring (ToggleSC))
 RealisticBatteries()
 SolarChange()
 end
