@@ -104,6 +104,10 @@ PlaceObj('ModItemBuildingTemplate', {
 	'electricity_production', 5000,
 }),
 PlaceObj('ModItemCode', {
+	'name', "Fun with Constants",
+	'FileName', "Code/Fun with Constants.lua",
+}),
+PlaceObj('ModItemCode', {
 	'name', "Lock Vanilla Power Buildings",
 	'FileName', "Code/Lock Vanilla Power Buildings.lua",
 }),
@@ -122,25 +126,5 @@ PlaceObj('ModItemCode', {
 PlaceObj('ModItemCode', {
 	'name', "Wind fluctuation",
 	'FileName', "Code/Wind fluctuation.lua",
-}),
-PlaceObj('ModItemCode', {
-	'name', "Wonders",
-	'FileName', "Code/Wonders.lua",
-}),
-PlaceObj('ModItemGameValue', {
-	'id', "TravelTimeEarthMars",
-	'percent', 400,
-}),
-PlaceObj('ModItemGameValue', {
-	'id', "TravelTimeMarsEarth",
-	'percent', 400,
-}),
-PlaceObj('ModItemGameValue', {
-	'id', "FundingGainsModifier",
-	'percent', -20,
-}),
-PlaceObj('ModItemGameValue', {
-	'id', "MaxColonistsPerRocket",
-	'percent', -30,
 }),
 }
