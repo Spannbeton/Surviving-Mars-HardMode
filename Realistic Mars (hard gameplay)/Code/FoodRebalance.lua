@@ -2,11 +2,13 @@
 function OnMsg.GameTimeStart()
 UICity.unlocked_upgrades["FoodRebalanceFarmUpgrade"] = true
 UICity.unlocked_upgrades["FoodRebalanceHydroponicsUpgrade"] = true
+FoodRebalance()
 end
 
 function OnMsg.LoadGame()
 UICity.unlocked_upgrades["FoodRebalanceFarmUpgrade"] = true
 UICity.unlocked_upgrades["FoodRebalanceHydroponicsUpgrade"] = true
+FoodRebalance()
 end
 
 -- ModConfig Integration
