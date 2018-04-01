@@ -16,7 +16,7 @@ function OnMsg.ModConfigReady()
         min = 10,
         max = 150,
         step = 2,
-		order = 1,
+		order = 11,
     })
 
 
@@ -28,7 +28,7 @@ function OnMsg.ModConfigReady()
         min = 0,
         max = 100,
         step = 5,
-		order = 1,
+		order = 11,
     })
 
 
@@ -40,32 +40,32 @@ function OnMsg.ModConfigReady()
         min = 0,
         max = 100,
         step = 5,
-		order = 1,
+		order = 11,
     })
 
     ModConfig:RegisterOption("Hard Mode", "Wind Fluctuation Note", {
         name = T{StringIdBase + 8, "<scale 1500>Wind Fluctuation Options" },
 		type = "note",
-        order = 0,
+        order = 10,
     })
 	    ModConfig:RegisterOption("Hard Mode", "Generic Note", {
         name = T{StringIdBase + 9, "<scale 1500>Generic Options"},
 		type = "note",
-        order = 2,
+        order = 20,
     })
 	
 	    ModConfig:RegisterOption("Hard Mode", "Toggles Note", {
         name = T{StringIdBase + 16, "<scale 1500>Toggle Submods"},
 		type = "note",
-        order = 4,
+        order = 30,
     })
 	
 	ModConfig:RegisterOption("Hard Mode", "ToggleNoBreakthroughs", {
         name = T{StringIdBase + 10, "No Breakthroughs"},
-        desc = T{StringIdBase + 11, "Breakthroughs replaced by research boost" .. "\nYou can still get up to 4 via Omega Telescope and Mystery"},
+        desc = T{StringIdBase + 11, "Breakthroughs replaced by research boost." .. "\nYou can still get up to 4 via Omega Telescope and Mystery."},
         type = "boolean",
         default = true,
-		order = 5,
+		order = 31,
 
     })
 	
@@ -76,7 +76,7 @@ function OnMsg.ModConfigReady()
         desc = T{StringIdBase + 13, "Disable Outsourcing"},
         type = "boolean",
         default = true,
-		order = 5,
+		order = 31,
 
     })
 	
@@ -85,7 +85,7 @@ function OnMsg.ModConfigReady()
         desc = T{StringIdBase + 13, "Batteries are only 70% efficient"},
         type = "boolean",
         default = true,
-		order = 5,
+		order = 31,
 
     })
 	
@@ -94,7 +94,7 @@ function OnMsg.ModConfigReady()
         desc = T{StringIdBase + 13, "Big Solar Panels need 0.2 Electronics in Maintainance"},
         type = "boolean",
         default = true,
-		order = 5,
+		order = 31,
 
     })
 	
@@ -106,7 +106,7 @@ function OnMsg.ModConfigReady()
         min = 10,
         max = 1000,
         step = 10,
-		order = 3,
+		order = 21,
 
     })
 	
@@ -118,7 +118,7 @@ function OnMsg.ModConfigReady()
         min = 1,
         max = 50,
         step = 1,
-		order = 3,
+		order = 21,
     })
 	
 	ModConfig:RegisterOption("Hard Mode", "FundingPercent", {
@@ -129,9 +129,17 @@ function OnMsg.ModConfigReady()
         min = 10,
         max = 150,
         step = 5,
-		order = 3,
+		order = 21,
 
     })	
 	
+	ModConfig:RegisterOption("Hard Mode", "ToggleFoodRebalance", {
+        name = T{StringIdBase + 16, "Food Production Rebalance"},
+        desc = T{StringIdBase + 17, "All Food producing buildings fill a different, but relevant role now"},
+        type = "boolean",
+        default = true,
+		order = 31,
+
+    })
 end
 

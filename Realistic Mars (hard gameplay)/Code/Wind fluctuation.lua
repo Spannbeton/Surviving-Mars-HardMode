@@ -1,7 +1,6 @@
-local ToggleWF = true --on by default 
 WindTurbine.OldCalcProduction = WindTurbine.CalcProduction
 
-function WindTurbine:Fluctuation()
+function WindTurbine:CalcProduction()
   local elevation_bonus = self:GetElevationBonus()
     local production_bonus = 100 + (elevation_bonus - 50) 
 	--Wind Fluctuation Parameters
@@ -23,7 +22,7 @@ self:SetBase("electricity_production", MulDivRound(50 + production_bonus, floatf
 self:SetAnimSpeedModifier(Min(floatfloor((300 + 3 * production_bonus)*wind_fluctuation), 1100))
 end
 
-
+--[[
 function OnMsg.ModConfigReady()
 ToggleWF = rawget(_G, "ModConfig") and ModConfig:Get("Hard Mode", "ToggleWF")
  if ToggleWF then WindTurbine.CalcProduction = WindTurbine.Fluctuation
@@ -34,7 +33,7 @@ ToggleWF = rawget(_G, "ModConfig") and ModConfig:Get("Hard Mode", "ToggleWF")
 if ToggleWF then WindTurbine.CalcProduction = WindTurbine.Fluctuation
  end
 end
-
+]]
 
 
 
