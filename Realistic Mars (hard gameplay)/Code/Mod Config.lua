@@ -1,5 +1,8 @@
+local lcSafePrint = lcPrint or function() end
+
 function OnMsg.ModConfigReady()
     local StringIdBase = 1339570684
+	lcSafePrint("Mod Configuration Ready.\n The following Settings apply:")
     
     ModConfig:RegisterMod("Hard Mode", -- ID
         T{StringIdBase, "Difficulty Options (May require restart)"}, -- Optional display name, defaults to ID
@@ -18,7 +21,7 @@ function OnMsg.ModConfigReady()
         step = 2,
 		order = 11,
     })
-
+lcSafePrint("Wind Fluctuation Period (hours) = " .. tostring (ModConfig:Get("Hard Mode", "wf_period")))
 
     ModConfig:RegisterOption("Hard Mode", "wf_min_prod", {
         name = T{StringIdBase + 4, "Wind Production (min) in % of Base"},
@@ -30,7 +33,7 @@ function OnMsg.ModConfigReady()
         step = 5,
 		order = 11,
     })
-
+lcSafePrint("Wind Production (min) in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "wf_min_prod")))
 
     ModConfig:RegisterOption("Hard Mode", "wf_amplitude", {
         name = T{StringIdBase + 6, "Wind Production (Amplitude) in % of Base"},
@@ -42,6 +45,8 @@ function OnMsg.ModConfigReady()
         step = 5,
 		order = 11,
     })
+	
+lcSafePrint("Wind Production (Amplitude) in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "wf_amplitude")))
 
     ModConfig:RegisterOption("Hard Mode", "Wind Fluctuation Note", {
         name = T{StringIdBase + 8, "<scale 1500>Wind Fluctuation Options" },
@@ -68,7 +73,7 @@ function OnMsg.ModConfigReady()
 		order = 31,
 
     })
-	
+	lcSafePrint("No Breakthroughs = " .. tostring (ModConfig:Get("Hard Mode", "ToggleNoBreakthroughs")))
 
 	
 	ModConfig:RegisterOption("Hard Mode", "ToggleNoOutsourcing", {
@@ -79,6 +84,7 @@ function OnMsg.ModConfigReady()
 		order = 31,
 
     })
+	lcSafePrint("No Outsourcing = " .. tostring (ModConfig:Get("Hard Mode", "ToggleNoOutsourcing")))
 	
 	ModConfig:RegisterOption("Hard Mode", "ToggleRealisticBatteries", {
         name = T{StringIdBase + 12, "Realistic Batteries"},
@@ -88,6 +94,7 @@ function OnMsg.ModConfigReady()
 		order = 31,
 
     })
+	lcSafePrint("Realistic Batteries = " .. tostring (ModConfig:Get("Hard Mode", "ToggleRealisticBatteries")))
 	
 	ModConfig:RegisterOption("Hard Mode", "ToggleSolarPanelBigElectronics", {
         name = T{StringIdBase + 12, "Solar Change"},
@@ -97,6 +104,7 @@ function OnMsg.ModConfigReady()
 		order = 31,
 
     })
+	lcSafePrint("ToggleSolarPanelBigElectronics = " .. tostring (ModConfig:Get("Hard Mode", "ToggleSolarPanelBigElectronics")))
 	
 	ModConfig:RegisterOption("Hard Mode", "TTPercent", {
         name = T{StringIdBase + 14, "Travel Time in % of Base"},
@@ -109,6 +117,7 @@ function OnMsg.ModConfigReady()
 		order = 21,
 
     })
+	lcSafePrint("Travel Time in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "TTPercent")))
 	
 	ModConfig:RegisterOption("Hard Mode", "NumberColonists", {
         name = T{StringIdBase + 14, "Number of Colonists per Rocket"},
@@ -120,6 +129,7 @@ function OnMsg.ModConfigReady()
         step = 1,
 		order = 21,
     })
+	lcSafePrint("Number of Colonists per Rocket = " .. tostring (ModConfig:Get("Hard Mode", "NumberColonists")))
 	
 	ModConfig:RegisterOption("Hard Mode", "FundingPercent", {
         name = T{StringIdBase + 14, "Funding Gains in % of Base"},
@@ -132,6 +142,7 @@ function OnMsg.ModConfigReady()
 		order = 21,
 
     })	
+	lcSafePrint("Funding Gains in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "FundingPercent")))
 	
 	ModConfig:RegisterOption("Hard Mode", "ToggleFoodRebalance", {
         name = T{StringIdBase + 16, "Food Production Rebalance"},
@@ -141,5 +152,31 @@ function OnMsg.ModConfigReady()
 		order = 31,
 
     })
+	lcSafePrint("Food Production Rebalance = " .. tostring (ModConfig:Get("Hard Mode", "ToggleFoodRebalance")))
 end
 
+function OnMsg.ModConfigChanged()
+lcSafePrint("Mod Configuration Changed.\n The following Settings apply:")
+  
+lcSafePrint("Wind Fluctuation Period (hours) = " .. tostring (ModConfig:Get("Hard Mode", "wf_period")))
+
+lcSafePrint("Wind Production (min) in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "wf_min_prod")))
+
+lcSafePrint("Wind Production (Amplitude) in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "wf_amplitude")))
+
+lcSafePrint("No Breakthroughs = " .. tostring (ModConfig:Get("Hard Mode", "ToggleNoBreakthroughs")))
+
+lcSafePrint("No Outsourcing = " .. tostring (ModConfig:Get("Hard Mode", "ToggleNoOutsourcing")))
+
+lcSafePrint("Realistic Batteries = " .. tostring (ModConfig:Get("Hard Mode", "ToggleRealisticBatteries")))
+
+lcSafePrint("ToggleSolarPanelBigElectronics = " .. tostring (ModConfig:Get("Hard Mode", "ToggleSolarPanelBigElectronics")))
+
+lcSafePrint("Travel Time in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "TTPercent")))
+
+lcSafePrint("Number of Colonists per Rocket = " .. tostring (ModConfig:Get("Hard Mode", "NumberColonists")))
+
+lcSafePrint("Funding Gains in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "FundingPercent")))
+
+lcSafePrint("Food Production Rebalance = " .. tostring (ModConfig:Get("Hard Mode", "ToggleFoodRebalance")))
+end

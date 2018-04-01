@@ -6,7 +6,7 @@ return PlaceObj('ModDef', {
 	'id', "LvDVa",
 	'steam_id', "1339570684",
 	'author', "Spannbeton",
-	'version', 105,
+	'version', 108,
 	'lua_revision', 228184,
 	'code', {
 		"Code/Fun with Constants.lua",
@@ -17,5 +17,5 @@ return PlaceObj('ModDef', {
 		"Code/FoodRebalance.lua",
 		"Code/Wind fluctuation.lua",
 	},
-	'saved', 1522581468,
+	'saved', 1522584872,
 })

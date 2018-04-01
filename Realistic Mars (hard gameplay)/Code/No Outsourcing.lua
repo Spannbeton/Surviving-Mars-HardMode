@@ -1,21 +1,21 @@
 g_Consts.OutsourceDisabled = 1
+local lcSafePrint = lcPrint or function() end
 
-local ToggleNOO = true
---- Mod Config Settings
-function OnMsg.NewHour(hour) --failsafe
-ToggleNOO = ModConfig:Get("Hard Mode", "ToggleNoOutsourcing")
+function OnMsg.ModConfigReady()
+	ToggleNOO = ModConfig:Get("Hard Mode", "ToggleNoOutsourcing") 
+	lcSafePrint("Ready")
 if (ToggleNOO==false) then
 	g_Consts.OutsourceDisabled = 0
 else 
- g_Consts.OutsourceDisabled = 1
+	g_Consts.OutsourceDisabled = 1
 end
 end
 
 function OnMsg.ModConfigChanged()
-ToggleNOO = ModConfig:Get("Hard Mode", "ToggleNoOutsourcing") 
+	ToggleNOO = ModConfig:Get("Hard Mode", "ToggleNoOutsourcing") 
 if (ToggleNOO==false) then
 	g_Consts.OutsourceDisabled = 0
 else 
- g_Consts.OutsourceDisabled = 1
+	g_Consts.OutsourceDisabled = 1
 end
 end

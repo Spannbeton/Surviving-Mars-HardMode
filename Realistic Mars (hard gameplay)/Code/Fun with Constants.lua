@@ -1,4 +1,4 @@
-
+local lcSafePrint = lcPrint or function() end
 
 --Adjust the all the Cuntstunts 
 
@@ -23,13 +23,13 @@ g_Consts.TravelTimeMarsEarth = 750000*TravelTimePercentage/100
 g_Consts.MaxColonistsPerRocket = ColonistperRocket
 g_Consts.FundingGainsModifier = FundingPercent
 --debug
---lcPrint("MCReady")
---lcPrint ("TT = " .. tostring(TravelTimePercentage))
---lcPrint ("FP = ".. tostring(FundingPercent))
---lcPrint ("CpR = ".. tostring(ColonistperRocket))
---lcPrint("constTT = "..tostring(g_Consts.TravelTimeEarthMars))
---lcPrint("ConstFP = "..tostring(g_Consts.FundingGainsModifier))
---lcPrint("ConstCPR = "..tostring(g_Consts.MaxColonistsPerRocket))
+--lcSafePrint("MCReady")
+--lcSafePrint ("TT = " .. tostring(TravelTimePercentage))
+--lcSafePrint ("FP = ".. tostring(FundingPercent))
+--lcSafePrint ("CpR = ".. tostring(ColonistperRocket))
+--lcSafePrint("constTT = "..tostring(g_Consts.TravelTimeEarthMars))
+--lcSafePrint("ConstFP = "..tostring(g_Consts.FundingGainsModifier))
+--lcSafePrint("ConstCPR = "..tostring(g_Consts.MaxColonistsPerRocket))
 end
 
 function OnMsg.ModConfigChanged()
@@ -42,12 +42,12 @@ g_Consts.TravelTimeMarsEarth = 750000*TravelTimePercentage/100
 g_Consts.MaxColonistsPerRocket = ColonistperRocket
 g_Consts.FundingGainsModifier = FundingPercent
 --debug
---lcPrint("MCReady")
---lcPrint ("TT = " .. tostring(TravelTimePercentage))
---lcPrint ("FP = ".. tostring(FundingPercent))
---lcPrint ("CpR = ".. tostring(ColonistperRocket))
---lcPrint("constTT = "..tostring(g_Consts.TravelTimeEarthMars))
---lcPrint("ConstFP = "..tostring(g_Consts.FundingGainsModifier))
---lcPrint("ConstCPR = "..tostring(g_Consts.MaxColonistsPerRocket))
+--lcSafePrint("MCReady")
+--lcSafePrint ("TT = " .. tostring(TravelTimePercentage))
+--lcSafePrint ("FP = ".. tostring(FundingPercent))
+--lcSafePrint ("CpR = ".. tostring(ColonistperRocket))
+--lcSafePrint("constTT = "..tostring(g_Consts.TravelTimeEarthMars))
+--lcSafePrint("ConstFP = "..tostring(g_Consts.FundingGainsModifier))
+--lcSafePrint("ConstCPR = "..tostring(g_Consts.MaxColonistsPerRocket))
 end
 
