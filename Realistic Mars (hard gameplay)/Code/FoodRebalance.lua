@@ -16,15 +16,11 @@ end
 local ToggleFR=true
 
 function OnMsg.ModConfigReady()
---lcPrint("Ready")
 ToggleFR = ModConfig:Get("Hard Mode", "ToggleFoodRebalance")
---lcPrint("ToggleFR = " .. tostring (ToggleFR))
 FoodRebalance()
 end
 function OnMsg.ModConfigChanged()
---lcPrint("Ready")
 ToggleFR = ModConfig:Get("Hard Mode", "ToggleFoodRebalance")
---lcPrint("ToggleFR = " .. tostring (ToggleFR))
 FoodRebalance()
 end
 

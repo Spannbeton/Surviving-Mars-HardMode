@@ -2,7 +2,7 @@ local lcSafePrint = lcPrint or function() end
 
 function OnMsg.ModConfigReady()
     local StringIdBase = 1339570684
-	lcSafePrint("Mod Configuration Ready.\n The following Settings apply:")
+	lcSafePrint("Mod Configuration Ready.\nTo display this Message on Mod reload set:\n Spannbeton = true \n The following Settings apply:")
     
     ModConfig:RegisterMod("Hard Mode", -- ID
         T{StringIdBase, "Difficulty Options (May require restart)"}, -- Optional display name, defaults to ID
@@ -154,8 +154,11 @@ lcSafePrint("Wind Production (Amplitude) in % of Base = " .. tostring (ModConfig
     })
 	lcSafePrint("Food Production Rebalance = " .. tostring (ModConfig:Get("Hard Mode", "ToggleFoodRebalance")))
 end
-
+--Debugfunctionality
+Spannbeton = false
 function OnMsg.ModConfigChanged()
+
+if Spannbeton ==true then
 lcSafePrint("Mod Configuration Changed.\n The following Settings apply:")
   
 lcSafePrint("Wind Fluctuation Period (hours) = " .. tostring (ModConfig:Get("Hard Mode", "wf_period")))
@@ -179,4 +182,6 @@ lcSafePrint("Number of Colonists per Rocket = " .. tostring (ModConfig:Get("Hard
 lcSafePrint("Funding Gains in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "FundingPercent")))
 
 lcSafePrint("Food Production Rebalance = " .. tostring (ModConfig:Get("Hard Mode", "ToggleFoodRebalance")))
+
+else end
 end

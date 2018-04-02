@@ -2,11 +2,11 @@ return PlaceObj('ModDef', {
 	'title', "Realistic Mars (hard gameplay)",
 	'description', "This Mod adds a whole bunch of new Gameplay and Difficulty Options. \r\n\r\nAbsolutely reqiures Mod Config by Waywocket:\r\nhttp://steamcommunity.com/sharedfiles/filedetails/?id=1340775972\r\n\r\nHave Fun.",
 	'tags', "Gameplay, Realism, Hardcore, Research, Breakthroughs, Hard, Difficulty, Buildings, Other",
-	'image', "Images/Hard Mode.png",
+	'image', "UI/Messages/Starman.jpg",
 	'id', "LvDVa",
 	'steam_id', "1339570684",
 	'author', "Spannbeton",
-	'version', 110,
+	'version', 115,
 	'lua_revision', 228184,
 	'code', {
 		"Code/FoodRebalance.lua",
@@ -17,5 +17,5 @@ return PlaceObj('ModDef', {
 		"Code/Research and Breakthroughs.lua",
 		"Code/Wind fluctuation.lua",
 	},
-	'saved', 1522602774,
+	'saved', 1522667852,
 })
