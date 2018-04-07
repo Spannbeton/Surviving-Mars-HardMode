@@ -11,6 +11,13 @@ UICity.unlocked_upgrades["FoodRebalanceHydroponicsUpgrade"] = true
 FoodRebalance()
 end
 
+--TechResearched
+function OnMsg.TechResearched(tech_id,city,first_time)
+
+	if tech_id == "SoilAdaptation" or tech_id == "LowGFungi" then
+	FoodRebalance()
+	end	
+end
 -- ModConfig Integration
 
 local ToggleFR=true
@@ -22,6 +29,13 @@ end
 function OnMsg.ModConfigChanged()
 ToggleFR = ModConfig:Get("Hard Mode", "ToggleFoodRebalance")
 FoodRebalance()
+end
+--Tech Research-Unlock
+function OnMsg.TechResearched(tech_id,city,first_time)
+
+	if tech_id == "SoilAdaptation" or tech_id == "LowGFungi" then
+	FoodRebalance()
+	end	
 end
 
 --Rebalance Function

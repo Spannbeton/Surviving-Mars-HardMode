@@ -153,7 +153,18 @@ lcSafePrint("Wind Production (Amplitude) in % of Base = " .. tostring (ModConfig
 
     })
 	lcSafePrint("Food Production Rebalance = " .. tostring (ModConfig:Get("Hard Mode", "ToggleFoodRebalance")))
+	
+		ModConfig:RegisterOption("Hard Mode", "SolarPanelDust", {
+        name = T{StringIdBase + 18, "Solar Panel Dust Penalty"},
+        desc = T{StringIdBase + 19, "Solar Panels have reduced output while dusty. Doubled Base Output."},
+        type = "boolean",
+        default = true,
+		order = 31,
+
+    })
+	lcSafePrint("Solar Panel Dust Penalty = " .. tostring (ModConfig:Get("Hard Mode", "SolarPanelDust")))
 end
+
 --Debugfunctionality
 Spannbeton = false
 function OnMsg.ModConfigChanged()
@@ -182,6 +193,8 @@ lcSafePrint("Number of Colonists per Rocket = " .. tostring (ModConfig:Get("Hard
 lcSafePrint("Funding Gains in % of Base = " .. tostring (ModConfig:Get("Hard Mode", "FundingPercent")))
 
 lcSafePrint("Food Production Rebalance = " .. tostring (ModConfig:Get("Hard Mode", "ToggleFoodRebalance")))
+
+lcSafePrint("Solar Panel Dust Penalty = " .. tostring (ModConfig:Get("Hard Mode", "SolarPanelDust")))
 
 else end
 end

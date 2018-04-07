@@ -301,6 +301,14 @@ PlaceObj('ModItemCode', {
 	'FileName', "Code/Research and Breakthroughs.lua",
 }),
 PlaceObj('ModItemCode', {
+	'name', "Events",
+	'FileName', "Code/Events.lua",
+}),
+PlaceObj('ModItemCode', {
+	'name', "Solar Panel Dust",
+	'FileName', "Code/Solar Panel Dust.lua",
+}),
+PlaceObj('ModItemCode', {
 	'name', "Wind fluctuation",
 	'FileName', "Code/Wind fluctuation.lua",
 }),
