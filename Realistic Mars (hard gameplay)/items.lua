@@ -277,6 +277,10 @@ PlaceObj('ModItemBuildingTemplate', {
 	'electricity_production', 5000,
 }),
 PlaceObj('ModItemCode', {
+	'name', "Events",
+	'FileName', "Code/Events.lua",
+}),
+PlaceObj('ModItemCode', {
 	'name', "FoodRebalance",
 	'FileName', "Code/FoodRebalance.lua",
 }),
@@ -299,10 +303,6 @@ PlaceObj('ModItemCode', {
 PlaceObj('ModItemCode', {
 	'name', "Research and Breakthroughs",
 	'FileName', "Code/Research and Breakthroughs.lua",
-}),
-PlaceObj('ModItemCode', {
-	'name', "Events",
-	'FileName', "Code/Events.lua",
 }),
 PlaceObj('ModItemCode', {
 	'name', "Solar Panel Dust",

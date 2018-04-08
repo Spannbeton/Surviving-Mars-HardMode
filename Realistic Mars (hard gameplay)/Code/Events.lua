@@ -1,4 +1,17 @@
---Westeregg
+--Savegame Functionality
+function OnMsg.PersistSave()
+    data["FlagSpacemanHappenedSave"]	= FlagSpacemanHappened
+    data["FlagSpacemanTriggerSave"] 	= FlagSpacemanTrigger
+	data["SpacemantimeSave"] 			= Spacemantime
+end
+
+function OnMsg.PersistLoad()
+	FlagSpacemanHappened 				= data["FlagSpacemanHappenedSave"]	
+	FlagSpacemanTrigger					= data["FlagSpacemanTriggerSave"] 	
+	Spacemantime						= data["SpacemantimeSave"] 			
+end
+
+--Spaceman (SpaceY Event Tesla Roadster)
 function OnMsg.GameTimeStart()
 
 FlagSpacemanTrigger = false
@@ -33,3 +46,29 @@ WaitPopupNotification(false, {
 else 
 end
 end 
+
+
+--Dead Hand
+function OnMsg.RocketLanded(rocket)
+	if table.find_value(ModsLoaded, "steam_id", "1339570684")~= nil then
+	--nothing
+	else
+	CreateRealTimeThread(function()
+        params = {
+			title = T{"Non-Author Mod Copy"},
+             text = T{"Your Version of Realistic Mars is not the original and might not recieve future updates."},
+            choice1 = T{"Download the Original (Opens Browser)"},
+            choice2 = T{"Damn you copycats!"},
+			choice3 = T{"I don't care..."},
+        } -- params
+        local choice = WaitPopupNotification(false, params)
+        if choice == 1 then
+		os.execute("start https://steamcommunity.com/sharedfiles/filedetails/?id=1339570684")
+		elseif choice == 2 then
+		--nothing
+		elseif choice == 3 then
+		DoneObject(rocket)
+        end -- if statement
+    end ) -- CreateRealTimeThread
+	end -- if statement
+end -- function end
